@@ -31,7 +31,6 @@ int main()
 		std::cout << a.GetIndex();
 	}*/
 	
-
 	ASD::ColorMenu b;
 	b.SetWidth(40);
 	b.SetHeight(10);
