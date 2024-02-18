@@ -1,6 +1,7 @@
 #include <string.h>
 #include "ASDString.h"
 
+
 namespace ASD{
 	String operator + (const char * str1, String & str2) {
 		return String(str1).add(str2);
@@ -24,4 +25,7 @@ namespace ASD{
 		str=str1;
 		return *this;
 	}
+
 }
+
+

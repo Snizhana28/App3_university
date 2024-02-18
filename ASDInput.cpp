@@ -17,6 +17,7 @@ bool ASD::Input::input(int x, int y) {
 		int key = _getch();
 		if (key == 13) break;
 		if (key == 27) { str = ""; return false; }
+
 		//backspace key
 		if (key == 8 && px > 0) {
 			str.RemoveAt(px - 1);
@@ -70,3 +71,4 @@ bool ASD::Input::input(int x, int y) {
 	}
 	return true;
 }
+

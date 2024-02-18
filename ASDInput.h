@@ -1,5 +1,6 @@
 #pragma once
 #include "ASDString.h"
+#include "fun_console.h"
 
 namespace ASD {
 	class Input

@@ -102,5 +102,19 @@ namespace ASD {
 			throw ArrayException(1);
 		}
 
+		void CalculateSumAndProduct(Array<int>& arr) {
+			int sum = 0;
+			int product = 1;
+
+			for (unsigned int i = 0; i < arr.GetCount(); i += 2) {
+				if (arr[i] > 0) {
+					sum += arr[i];
+					product *= arr[i];
+				}
+			}
+
+			std::cout << "Sum : " << sum << std::endl;
+			std::cout << "Product : " << product << std::endl;
+		}
 	};
 }

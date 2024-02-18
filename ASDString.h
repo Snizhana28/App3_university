@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdarg>
 #include <stdio.h>
+
 namespace ASD{
 	class String{
 			char *str;
@@ -88,6 +89,7 @@ namespace ASD{
 			bool operator !=(String &s){return compare(s.str)!=0;}
 			bool operator !(){return length()==0;}
 			friend String operator + (const char * str1, String & str2);
+
 	};
 }
 
