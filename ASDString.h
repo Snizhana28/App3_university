@@ -74,6 +74,18 @@ namespace ASD{
 				return *this;
 			}
 
+			//reverse string
+			String& Reverse() {
+				int len = length();
+				char *str1 = new char[len + 1];
+				for (int i = 0; i < len; i++) {
+					str1[i] = str[len - i - 1];
+				}
+				str1[len] = 0;
+				delete str;
+				str = str1;
+				return *this;
+			}
 
 			String & operator <<(const char *s){return add(s);}
 			String & operator <<(String &s){return add(s.str);}
