@@ -1,6 +1,7 @@
 #pragma once
 
 namespace ASD {
+	typedef void* POSITION;
 
 	template <class T>
 	class List
@@ -17,11 +18,11 @@ namespace ASD {
 		List() { head = tail = 0; count = 0; }
 		~List() { RemoveAll(); }
 
-		typedef void * POSITION;
 		int GetCount() { return count; }
 		POSITION GetHead() { return (POSITION)head; }
 		POSITION GetTail() { return (POSITION)tail; }
-
+		T calculateSum();
+		T calculateProduct();
 		T GetNext(POSITION & pos) {
 			T data = ((Node *)pos)->data;
 			pos = (POSITION)(((Node *)pos)->next);
@@ -93,7 +94,51 @@ namespace ASD {
 			t->next = n;
 			return *this;
 		}
-		
+		void showList() {
+			for (POSITION pos = GetHead(); pos != nullptr; pos = ((Node*)pos)->next) {
+				std::cout << ((Node*)pos)->data << " ";
+			}
+		}
 	};
+	template <class T>
+	T List<T>::calculateSum() {
+		T sum = 0;
+		POSITION pos = GetHead();
+		int i = 0;
+
+		while (pos) {
+			if (i % 2 == 0 && ((Node*)pos)->data > 0) { 
+				sum += ((Node*)pos)->data;
+			}
+			pos = ((Node*)pos)->next;
+			i++;
+		}
+
+		return sum;
+	}
+
+	template <class T>
+	T List<T>::calculateProduct() {
+		T product = 1;
+		POSITION pos = GetHead();
+		int i = 0;
+
+		while (pos) {
+			if (i % 2 == 0 && ((Node*)pos)->data > 0) { 
+				product *= ((Node*)pos)->data;
+			}
+			pos = ((Node*)pos)->next;
+			i++;
+		}
+
+		return product;
+	}
+	template <class T>
+	void showList(List<T>& list) {
+		for (POSITION pos = list.GetHead(); pos != nullptr; pos = ((typename List<T>::Node*)pos)->next) {
+			std::cout << ((typename List<T>::Node*)pos)->data << " ";
+		}
+	}
+
 }
 

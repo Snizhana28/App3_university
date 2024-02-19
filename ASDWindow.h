@@ -50,8 +50,8 @@ namespace ASD {
 		int align;
 	public:
 		BaseMenu() :Window() {
-			activeColor = Yellow;
-			activeBgColor = Black;
+			activeColor = LightCyan;
+			activeBgColor = LightMagenta;
 			activeIndex = -1;
 			align = Middle;
 		}
