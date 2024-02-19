@@ -113,8 +113,7 @@ namespace ASD {
 				}
 			}
 
-			std::cout << "Sum : " << sum << std::endl;
-			std::cout << "Product : " << product << std::endl;
+			std::cout << "Sum : " << sum << " Product : " << product << std::endl;
 		}
 	};
 }

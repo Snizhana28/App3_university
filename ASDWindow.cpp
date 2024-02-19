@@ -8,7 +8,7 @@ ASD::Window::Window() {
 	w = GetCols();
 	h = GetRows() - 1;
 	color = White;
-	bgColor = Blue;
+	bgColor = LightBlue;
 	borderColor = LightCyan;
 	borderShadowColor = Red;
 	border[0] = 218;

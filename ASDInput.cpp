@@ -5,8 +5,8 @@
 
 bool ASD::Input::input(int x, int y) {
 	str = "";	
-	int px = 0;
-	while (1) {
+	int px = 0; 
+	while (true) {
 		GotoXY(x, y);
 		for (int i = 0; i < mask.length(); i++) {
 			std::cout << " ";
@@ -15,8 +15,13 @@ bool ASD::Input::input(int x, int y) {
 		std::cout << str;
 		GotoXY(x + px, y);
 		int key = _getch();
-		if (key == 13) break;
-		if (key == 27) { str = ""; return false; }
+		if (key == 13)
+		{			
+			break;
+		}
+		if (key == 27) {
+			return false;
+		}
 
 		//backspace key
 		if (key == 8 && px > 0) {
