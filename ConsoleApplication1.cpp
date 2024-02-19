@@ -46,7 +46,7 @@ int main()
             win.Write(8, 0, "Input digit: ");
             win.Write(2, 3, "Press Enter for continue");
             win.Write(2, 4, "Press ESC to exit");
-            Input input("0000");
+            Input input("00");
             while (input.input(33, 12))
             {
                 int num = atoi((const char*)input.get());
